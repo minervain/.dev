@@ -1,15 +1,29 @@
-import React from "react";
+import React, {useEffect,useState}from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import axios from "axios";
+import img from "../../Assets/aou.png"
+
+
 
 function Projects() {
+  
+const [projects, setProjects] = useState([]);
+
+useEffect(() => {
+  const fetchProjects = async () => {
+    try {
+      const response = await axios.get('https://api.github.com/users/minervain/repos');
+      setProjects(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  fetchProjects();
+}, []);
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -21,69 +35,18 @@ function Projects() {
         İşte son zamanlarda üzerinde çalıştığım birkaç proje.  
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Register Page"
-              description="Üniversite hocamızın vize ödevi olarak verdiği Register Sayfası"
-              ghLink="https://github.com/minervain"
-              demoLink="https://github.com/minervain"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Hava Durumu Uygulaması"
-              description="React ile hazırladığım Apiden gelen verilerle hazırladığım Hava durumu uygulaması"
-              ghLink="https://github.com/minervain"
-              demoLink="https://github.com/minervain"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="React.js ile çevrimiçi kod ve işaretleme düzenleyici derlemesi. Web sitesinin anında görünümü ile html, css ve js kodunu destekleyen Çevrimiçi Düzenleyici"
-              ghLink="https://github.com/minervain"
-              demoLink="https://github.com/minervain"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Restorant Sitesi"
-              description="Pure js ve çeşitli kütüphanelerle hazırladığım Restorant Sitesi"
-              ghLink="https://github.com/minervain"
-              demoLink="https://github.com/minervain"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Mayın Tarlası"
-              description="Java ile hazırlanan metin tabanlı mayın tarlası oyunu"
-              ghLink="https://github.com/minervain"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Para Harcama Mağazası"
-              description="Prototürk youtube kanalından gördüğüm para harcama mağazasının klonu"
-              ghLink="https://github.com/minervain"
-            />
-          </Col>
+      {projects.map((project) => (
+        <Col md={4} className="project-card" key={project.id}>
+          <ProjectCard
+            imgPath={img}
+            isBlog={false}
+            title={project.name}
+            description={project.description}
+            ghLink={project.html_url}
+            demoLink={project.html_url}
+          />
+        </Col>
+      ))}
         </Row>
       </Container>
     </Container>
