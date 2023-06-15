@@ -8,10 +8,14 @@ import {
   DiPython,
   DiGit,
   DiJava,
+  
+  
 } from "react-icons/di";
 import {
-  SiFirebase,
+  SiAngularjs,
+  SiSpring,
   SiPostgresql,
+  SiTypescript
 } from "react-icons/si";
 
 function Techstack() {
@@ -37,7 +41,7 @@ function Techstack() {
         <DiGit />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
+        <SiAngularjs />
       </Col>
       
       <Col xs={4} md={2} className="tech-icons">
@@ -48,6 +52,12 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiJava />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiSpring/>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiTypescript/>
       </Col>
     </Row>
   );
