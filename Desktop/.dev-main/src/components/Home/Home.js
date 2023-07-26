@@ -8,14 +8,16 @@ import Type from "./Type";
 function Home() {
   return (
     <section>
+       <div className="container" >
       <Container fluid className="home-section" id="home">
+       
         <Particle />
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
              
             <h1 style={{ paddingBottom: 15 }} className="heading">
-              - Hаyаttа hep mutlu olursаm, hаyаlini kurаcаk neyim kаlır?
+              Kalite arıyorsan call me :)
 {" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   
@@ -46,8 +48,10 @@ function Home() {
             </Col>
           </Row>
         </Container>
+        
       </Container>
       <Home2 />
+      </div>
     </section>
   );
 }
