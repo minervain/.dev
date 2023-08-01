@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1.5px;
+    background-color: red;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    margin-right: 15px;
+    font: bold;
+    margin-left: 5px;
+}
+
+.logo p {
+    font-size: 18px;
+
+}
+
+.product {
+    padding: 15px;
+}
+
+.basket {
+    margin-right: 5px;
+}

@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 33%;
+  }
+  
+  .card {
+    flex-basis: calc(50% ); /* 4 kartın yan yana sığması için her kartın genişliği %25 olacak şekilde ayarlayın ve aralarında 8px boşluk bırakın */
+    margin: 4px;
+    width: 100%;
+  }
+  .cb{
+    position: relative;
+  }
+  .price{
+    margin-top: 10px;
+    position: relative;
+    bottom: 0;
+  }
