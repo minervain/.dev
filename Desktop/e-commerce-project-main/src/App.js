@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Basket from './components/Basket';
 import { useEffect, useState } from 'react';
 import './tailwind.css'
+import ProductDetail from './components/details/details';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product veri={veri}/>} />
         <Route path="/sepet" element={<Basket />} />
+        <Route path='/product/:id' element={<ProductDetail/>}></Route>
       </Routes>
     </div>
   );
