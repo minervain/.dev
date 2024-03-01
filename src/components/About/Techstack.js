@@ -8,8 +8,8 @@ import {
   DiPython,
   DiGit,
   DiJava,
-  
-  
+
+
 } from "react-icons/di";
 import {
   SiAngularjs,
@@ -20,46 +20,48 @@ import {
 
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-    
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-    
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAngularjs />
-      </Col>
-      
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSpring/>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTypescript/>
-      </Col>
-    </Row>
+    <>
+      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+
+        <Col xs={4} md={2} className="tech-icons">
+          <DiJavascript1 />
+        </Col>
+
+        <Col xs={4} md={2} className="tech-icons">
+          <DiNodejs />
+        </Col>
+        <Col xs={4} md={2} className="tech-icons">
+          <DiReact />
+        </Col>
+
+        <Col xs={4} md={2} className="tech-icons">
+          <DiMongodb />
+        </Col>
+
+        <Col xs={4} md={2} className="tech-icons">
+          <DiGit />
+        </Col>
+        <Col xs={4} md={2} className="tech-icons">
+          <SiAngularjs />
+        </Col>
+
+        <Col xs={4} md={2} className="tech-icons">
+          <SiPostgresql />
+        </Col>
+        <Col xs={4} md={2} className="tech-icons">
+          <DiPython />
+        </Col>
+        <Col xs={4} md={2} className="tech-icons">
+          <DiJava />
+        </Col>
+        <Col xs={4} md={2} className="tech-icons">
+          <SiSpring />
+        </Col>
+        <Col xs={4} md={2} className="tech-icons">
+          <SiTypescript />
+        </Col>
+      </Row>
+    </>
   );
 }
 

@@ -4,8 +4,8 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import myImg from '../../Assets/avatar.png'
 
 function About() {
   return (
@@ -17,21 +17,18 @@ function About() {
             md={7}
             style={{
               justifyContent: "center",
-              paddingTop: "30px",
               paddingBottom: "50px",
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
               <strong className="purple">./minervain</strong>
-            </h1> 
+            </h1>
             <Aboutcard />
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+          <Col md={4} className="myAvtar">
+            <div>
+              <img src={myImg} style={{ borderRadius: '50%' }} className="img-fluid" alt="avatar" />
+            </div>
           </Col>
         </Row>
         <h1 className="project-heading">

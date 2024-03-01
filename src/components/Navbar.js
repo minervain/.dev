@@ -8,8 +8,8 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiFillPlusSquare
 } from "react-icons/ai";
-
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -49,8 +49,13 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Anasayfa
+              <Nav.Link
+                as={Link}
+                to="/"
+                onClick={() => updateExpanded(false)}
+                className="d-flex align-items-center"
+              >
+                <AiOutlineHome style={{ marginBottom: "1px" }} /> Anasayfa
               </Nav.Link>
             </Nav.Item>
 
@@ -59,8 +64,9 @@ function NavBar() {
                 as={Link}
                 to="/about"
                 onClick={() => updateExpanded(false)}
+                className="d-flex align-items-center"
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Hakkımda
+                <AiOutlineUser /> Hakkımda
               </Nav.Link>
             </Nav.Item>
 
@@ -69,17 +75,22 @@ function NavBar() {
                 as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
+                className="d-flex align-items-center"
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projelerim
+                <AiOutlineFundProjectionScreen /> Projelerim
               </Nav.Link>
             </Nav.Item>
 
-           
-
-         
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/blog"
+                onClick={() => updateExpanded(false)}
+                className="d-flex align-items-center"
+              >
+                <AiFillPlusSquare /> Bloglarım
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
